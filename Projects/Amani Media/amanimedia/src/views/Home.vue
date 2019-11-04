@@ -3,26 +3,24 @@
     <!-- A la une -->
     <div class="py-3 px-2 px-md-5">
       <!-- Posts exist -->
-      <div class="row no-gutters" v-if="loadedPosts.length">
+      <div class="row no-gutters" v-if="recentPosts.length">
         <!--  -->
         <div class="col-12 col-md-6 pr-md-1">
-          <div class="mySlides" v-for="(post, x) in recentPosts" :key="x">
-            <div class="card w-100 __card border-left-0">
-              <img
-                :src="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia']['0'].source_url : ''"
-                alt
-                class="__card-image"
-              />
-              <div class="__card-content">
-                <!-- <h6>#1</h6> -->
-                <div class="text-white text-uppercase caption">{{post.date | date}}</div>
-                <h2 class="font-weight-bold _font2 _h2">
-                  <router-link
-                    :to="`/article/${post.slug}`"
-                    title
-                    v-html="post.title.rendered"
-                  ></router-link>
-                </h2>
+          <div class="mySlides">
+            <div class v-for="(post, x) in recentPosts" :key="x">
+              <div class="card w-100 __card border-left-0" v-if="post">
+                <img
+                  :src="post._embedded['wp:featuredmedia'] ? post._embedded['wp:featuredmedia']['0'].source_url : ''"
+                  alt
+                  class="__card-image"
+                />
+                <div class="__card-content">
+                  <!-- <h6>#1</h6> -->
+                  <div class="text-white text-uppercase caption">{{post.date | date}}</div>
+                  <h2 class="font-weight-bold _font2 _h2">
+                    <router-link :to="`/article/${post.slug}`" title v-html="post.title.rendered"></router-link>
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
@@ -92,7 +90,6 @@
       </div>
       <!-- Posts Placeholders -->
       <div v-else>
-        <div class="mySlides"></div>
         <AlaunePlaceholder />
       </div>
     </div>
@@ -512,20 +509,30 @@ export default {
       }
     },
     carousel() {
-      var i;
-      var x = document.getElementsByClassName("mySlides");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+      if (this.recentPosts.length >= 0) {
+        $(".mySlides").slick({
+          autoplay: true,
+          infinite: true,
+          slidesToShow: 1,
+        });
       }
-      this.myIndex++;
-      if (this.myIndex > x.length) {
-        this.myIndex = 1;
-      }
-      x[this.myIndex - 1].style.display = "block";
-      setTimeout(this.carousel, 10000);
+      // var i;
+      // var x = document.getElementsByClassName("mySlides");
+      // for (i = 0; i < x.length; i++) {
+      //   x[i].style.display = "none";
+      // }
+      // this.myIndex++;
+      // if (this.myIndex > x.length) {
+      //   this.myIndex = 1;
+      // }
+      // x[this.myIndex - 1].style.display = "block";
+      // setTimeout(this.carousel, 10000);
     }
   },
   mounted() {
+    this.carousel();
+  }, 
+  updated() {
     this.carousel();
   }
 };

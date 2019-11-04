@@ -1,3 +1,5 @@
+$color-base: #ecf0f1;
+$color-highlight: lighten($color-base, 4%);
 a {
     &:hover {
         color: inherit;
@@ -9,10 +11,15 @@ a {
     height: 100%;
     z-index: 10!important;
     position: relative;
-    &:after {
-        content: "";
+    overflow: hidden;
+    &::after {
+        content: '';
         position: absolute;
-        background: transparent!important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(90deg, $color-base, $color-highlight, $color-base);
+        animation: progress 1s ease-in-out infinite;
     }
 }
 
@@ -28,36 +35,57 @@ a {
 
 .__placeholder-article-img {
     height: 420px;
+    &::after {
+        height: 420px;
+    }
 }
 
 .__placeholder-lg {
     height: 210px;
+    &::after {
+        height: 210px;
+    }
 }
 
 .__placeholder-sm {
     height: 110px;
+    &::after {
+        height: 110px;
+    }
 }
 
 .__placeholder-h5 {
     background-color: #ecf0f1;
     width: 100%;
     height: 26px;
+    &::after {
+        height: 26px;
+    }
 }
 
 .__placeholder-text {
     background-color: #ecf0f1;
     width: 100%;
     height: 16px;
+    &::after {
+        height: 16px;
+    }
 }
 
 .__placeholder-date {
     background-color: #ecf0f1;
     width: 100%;
     height: 10px;
+    &::after {
+        height: 10px;
+    }
 }
 
 .__placeholder-content {
     height: 400px;
+    &::after {
+        height: 400px;
+    }
 }
 
 .__category {
@@ -319,6 +347,26 @@ textarea {
     }
 }
 
+.__card_placeholder {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    border: none;
+    background-color: #ecf0f1;
+    z-index: 10!important;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, $color-base, $color-highlight, $color-base);
+        animation: progress 1s ease-in-out infinite;
+    }
+}
+
 .__card-image {
     position: absolute;
     height: 100%;
@@ -358,11 +406,17 @@ textarea {
     }
 }
 
+.__card_placeholder-half {
+    height: 248px;
+    margin-bottom: 4px;
+}
+
 .__card-half-left {
     padding-left: 2px!important;
 }
 
-.__card-half-right {
+.__card-half-right,
+.__card_placeholder-half-right {
     padding-right: 2px!important;
 }
 
@@ -1757,3 +1811,12 @@ textarea {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
+
+@keyframes progress {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        transform: translate3d(100%, 0, 0);
+    }
+}

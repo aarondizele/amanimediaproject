@@ -17,8 +17,7 @@
 <script>
 import axios from 'axios';
 
-const url = "https://www.amanimedia.cd"
-
+const url = "https://www.amanimedia.cd";
 // When the user scrolls the page, execute myFunction 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -86,7 +85,7 @@ export default {
       this.fetchSport();
     },
     fetchPosts() {
-      return fetch('/main.php/wp-json/wp/v2/posts?_embed&per_page=20&order_by=date&order=desc')
+      return fetch(`${url}/main.php/wp-json/wp/v2/posts?_embed&per_page=20&order_by=date&order=desc`)
       .then((response) => {
           return response.json();
         })
@@ -98,7 +97,7 @@ export default {
         });
     },
     fetchEconomy() {
-      return fetch('/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=2')
+      return fetch(`${url}/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=2`)
       .then((response) => {
           return response.json();
         })
@@ -107,7 +106,7 @@ export default {
         });
     },
     fetchSociety() {
-      return fetch('/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=9')
+      return fetch(`${url}/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=9`)
       .then((response) => {
           return response.json();
         })
@@ -116,7 +115,7 @@ export default {
         });
     },
     fetchInternational() {
-      return fetch('/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=10')
+      return fetch(`${url}/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=10`)
       .then((response) => {
           return response.json();
         })
@@ -125,7 +124,7 @@ export default {
         });
     },
     fetchSport() {
-      return fetch('/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=3')
+      return fetch(`${url}/main.php/wp-json/wp/v2/posts?_embed&per_page=10&order_by=date&order=desc&categories=3`)
       .then((response) => {
           return response.json();
         })
@@ -181,6 +180,9 @@ a {
 // }
 .gd-sage {
   font-family: "Grand Sage", "Roboto", Helvetica, Arial, sans-serif;  
+}
+.slick-arrow {
+  display: none!important;
 }
 /* The progress container (grey background) */
 .progress-container {
