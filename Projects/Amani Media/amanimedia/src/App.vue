@@ -17,7 +17,7 @@
 <script>
 import axios from 'axios';
 
-const url = "https://www.amanimedia.cd";
+const url = 'https://www.amanimedia.cd'
 // When the user scrolls the page, execute myFunction 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {

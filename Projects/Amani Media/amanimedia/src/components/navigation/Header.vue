@@ -13,7 +13,7 @@
           </h1>
           <div class="d-none d-md-block">
             <button
-              class="_button _button-outline _flex _center rounded-pill font-weight-bold gd-sage"
+              class="_button _button-outline _flex _center rounded-pill gd-sage"
               @click="searchable = !searchable"
             >
               <i class="far fa-search mr-1"></i>
@@ -50,7 +50,7 @@
           <a class="_button">Forums</a>
           <a class="_button">Archives</a>
           <router-link tag="a" to="/a-propos" class="_button">À propos</router-link>
-          <a class="_button _button-outline rounded-pill font-weight-bold gd-sage">Nous contacter</a>
+          <a class="_button _button-outline rounded-pill gd-sage">Nous contacter</a>
         </div>
         <div class="d-block d-md-none">
           <div class="_flex">
