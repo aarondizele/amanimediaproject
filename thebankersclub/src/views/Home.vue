@@ -85,7 +85,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6 col-lg-3" v-for="(ex, i) in explorer" :key="i">
+          <div class="col-12 col-md-6 col-lg-3" v-for="(ex, i) in explorer" :key="i">
             <router-link
               tag="div"
               :to="ex.url"
@@ -209,7 +209,7 @@ export default {
 }
 .__header {
   position:relative;
-  height:500px;
+  max-height:600px;
   background-image:url(../assets/mbole.png);
   background-size:cover;
   border-top-right-radius: 6px;

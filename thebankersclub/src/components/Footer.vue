@@ -3,7 +3,7 @@
     <!-- Contact -->
     <div class="__background position-relative">
       <div class="__boule"></div>
-      <div class="px-10 px-20-lg pt-10 pb-5 py-10-md">
+      <div class="px-5 px-10-md px-20-lg pt-10 pb-5 py-10-md">
         <h3 class="font-weight-bold _flex mb-10 aino-font">Nous contacter</h3>
         <div class="row">
           <!-- Info -->

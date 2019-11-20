@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="__activities pt-5 pb-0 pt-10-md pb-20-md">
+    <div class="__activities pt-5 pb-0 pt-10-md pb-20-md" style="z-index:100!important">
       <div class="_header1">
         <div class="row no-gutters">
           <div class="col-12 col-md-3 __lefter">
@@ -19,7 +19,7 @@
                   <h1 class="font-weight-bold aino-font">Nos activités</h1>
                   <!--  -->
                   <div class="row _flex _center mt-10 aino-font font-weight-bold">
-                    <div class="col-6 mb-3 mb-md-0 col-md-6 mb-10 _flex">
+                    <div class="col-12 mb-3 mb-md-0 col-md-6 mb-10 _flex">
                       <div class="mr-4">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -62,7 +62,7 @@
                       </div>
                       <div class>Rencontres/débats</div>
                     </div>
-                    <div class="col-6 mb-3 mb-md-0 col-md-6 mb-10 _flex">
+                    <div class="col-12 mb-3 mb-md-0 col-md-6 mb-10 _flex">
                       <div class="mr-4">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -87,7 +87,7 @@
                       </div>
                       <div class>Séminaires</div>
                     </div>
-                    <div class="col-6 mb-3 mb-md-0 col-md-6 mb-10 _flex">
+                    <div class="col-12 mb-3 mb-md-0 col-md-6 mb-10 _flex">
                       <div class="mr-4">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -110,7 +110,7 @@
                       </div>
                       <div class>Conférence</div>
                     </div>
-                    <div class="col-6 mb-3 mb-md-0 col-md-6 mb-10 _flex">
+                    <div class="col-12 mb-3 mb-md-0 col-md-6 mb-10 _flex">
                       <div class="mr-4">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
@@ -178,7 +178,7 @@
                       </div>
                       <div class>Soirée de gala</div>
                     </div>
-                    <div class="col-6 col-md-6 mb-10 _flex">
+                    <div class="col-12 col-md-6 mb-10 _flex">
                       <div class="mr-4">
                         <svg
                           preserveAspectRatio="xMidYMid meet"
