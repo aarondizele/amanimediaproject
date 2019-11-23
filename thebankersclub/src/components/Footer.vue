@@ -64,7 +64,7 @@
         </div>
       </div>
       <!-- Newsletter -->
-      <div class="px-10 pt-5 pb-10 py-10-md px-20-lg">
+      <div class="px-3 px-10-md pt-5 pb-10 py-10-md px-20-lg">
         <div
           class="__newsletter d-flex flex-row flex-wrap flex-md-nowrap align-items-center justify-content-center justify-content-md-between"
         >

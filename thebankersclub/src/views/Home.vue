@@ -209,7 +209,7 @@ export default {
 }
 .__header {
   position:relative;
-  max-height:600px;
+  height:600px;
   background-image:url(../assets/mbole.png);
   background-size:cover;
   border-top-right-radius: 6px;
